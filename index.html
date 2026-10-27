@@ -30,6 +30,12 @@
       background: var(--color-background);
     }
 
+    body > h2:first-of-type {
+      margin-top: 0.5rem;
+      color: var(--color-primary);
+      font-size: 1.2rem;
+    }
+
     h1 {
       margin: 0 0 0.35rem;
       font-size: 2rem;
@@ -38,8 +44,8 @@
     }
 
     h2 {
-      margin: 1.75rem 0 0.5rem;
-      font-size: 1.35rem;
+      margin: 2.25rem 0 0.65rem;
+      font-size: 1.6rem;
       font-family: var(--font-heading);
       font-weight: 400;
     }
@@ -67,6 +73,7 @@
       margin: -1.5rem -1.5rem 0;
       padding: 1rem 1.5rem;
       background: var(--color-background);
+      border-bottom: 1px solid rgba(45, 41, 38, 0.12);
     }
 
     .site-header a {
@@ -90,9 +97,19 @@
       gap: 1rem;
     }
 
+    .site-header nav a {
+      font-weight: 700;
+    }
+
+    .site-header nav a[href="#menu"] {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: var(--color-accent);
+    }
+
     .hero {
       margin: 0 -1.5rem 1.5rem;
-      padding: 3rem 1.5rem;
+      padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
       background: var(--color-secondary);
       display: grid;
       grid-template-columns: 1fr minmax(16rem, 0.9fr);
@@ -113,17 +130,22 @@
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      max-width: 13ch;
+      font-size: clamp(2.6rem, 4.5vw, 3.5rem);
+      line-height: 1.18;
     }
 
     .hero p {
       margin-bottom: 1rem;
+      max-width: 30rem;
+      font-size: 1.15rem;
     }
 
     .hero a {
       display: inline-block;
       padding: 0.65rem 1rem;
       border-radius: 0.35rem;
+      font-weight: 700;
       color: var(--color-on-primary);
       background: var(--color-primary);
       text-decoration: none;
@@ -177,6 +199,7 @@
     .drink-card figcaption {
       padding: 0.85rem 1rem 0;
       font-weight: bold;
+      font-size: 1.08rem;
     }
 
     .drink-card p {
@@ -198,10 +221,17 @@
     .drink-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+      gap: 1.25rem;
       max-width: 60rem;
       padding-left: 0;
       list-style: none;
+    }
+
+    #menu {
+      margin-top: 2.75rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 3px solid var(--color-accent);
+      font-size: 2rem;
     }
 
     .info-row {
